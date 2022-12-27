@@ -20,13 +20,27 @@
 .cloud{
     width: 500px;
     position: absolute;
-    left: -200px;
+    transform: rotateY(180deg);
+    animation: trunk-animation 10s infinite linear;
 }
+.cloud2{
+    position: absolute;
+    width: 300px;
+    top: -30px;
+    animation: cloud-animation 9s infinite linear;
+}
+.cloud3{
+    position: absolute;
+    width: 400px;
+    bottom: 50%;
+    animation: cloud-animation 11s infinite linear;
+}
+
 .trunk{
     width: 450px;
     position: absolute;
     bottom: -80px;
-    right: -180px;
+    animation: trunk-animation 2s infinite linear;
 }
 .floor{
     background-color: green;
@@ -34,4 +48,23 @@
     position: absolute;
     bottom: 0;
     height: 15px;
+    
+}
+
+
+@keyframes trunk-animation {
+    from {
+        right: -260px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes cloud-animation{
+    from{
+        left: -300px;
+    }to {
+        left: 100%;
+    }
 }
