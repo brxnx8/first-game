@@ -44,6 +44,7 @@ const loop = setInterval(() => {
 
         document.removeEventListener('keydown', jump);
         document.removeEventListener('click', jump);
+        document.removeEventListener('touchend', jump);
         
         trunk.style.animation = 'none';
         trunk.style.left = `${trunkleft}px`;
@@ -74,4 +75,6 @@ const loop = setInterval(() => {
 
 document.addEventListener('click', jump);
 document.addEventListener('keydown', jump);
+document.addEventListener('touchend', jump);
+
 
