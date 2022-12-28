@@ -10,6 +10,10 @@ let point = 0;
 
 const jump = () =>
 {
+    document.querySelector(".div-init").style.display = 'none';
+
+    trunk.classList.add('trunk-animation');
+    
     var trunkl = trunk.offsetLeft;
     kakashi.src = 'assets/jump.png';
     kakashi.classList.add('jump');
@@ -17,7 +21,7 @@ const jump = () =>
         kakashi.src = 'assets/kakashi.gif';
         kakashi.classList.remove('jump');
     }, "500");
-    if(trunkl > -80 && trunkl < 173)
+    if(trunkl > -89 && trunkl < 230)
     {
         point++;
         

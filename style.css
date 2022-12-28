@@ -3,7 +3,14 @@
     padding: 0;
     
 }
-
+.div-init{
+    position: absolute;
+    bottom: 80%;
+    left: 43.5%;
+    font-size: 30px;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));;
+}
 .container-main{
      background-color: white;
      width: 80%;
@@ -48,7 +55,8 @@
     width: 450px;
     position: absolute;
     bottom: -80px;
-    animation: trunk-animation 1.5s infinite linear;
+    right: -200px;
+    
 }
 .floor{
     background-color: green;
@@ -66,7 +74,7 @@
     background-color: gray;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 45.6%;
     font-size: 20px;
     padding: 10px;
 }
@@ -74,12 +82,15 @@
     background-color: green;
     position: absolute;
     top: 40%;
-    left: 50%;
+    left: 45.5%;
     width: 100px;
     font-size: 20px;
     padding: 10px;
     cursor: pointer;
     display: none;
+}
+.trunk-animation {
+    animation: trunk-animation 1.5s infinite linear;
 }
 
 @keyframes trunk-animation {
@@ -116,3 +127,11 @@
         bottom: 0;
     }
 }
+@keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }
