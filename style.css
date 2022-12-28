@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 .container-main{
@@ -12,33 +13,31 @@
      border: 1px solid rgba(0, 0, 0, 0.104);
      overflow: hidden;
 }
+.end {
+    background-color: rgba(0, 0, 0, 0.561);
+}
 .character{
     width: 200px;
     position: absolute;
     bottom: 0;
-    
+    border-radius: 100%;
 }
-.kakashi-jump{
-    position: absolute;
-    height: 250px;
-    width: 250px;
-    left: -25px;}
 .jump{
     animation: jump 500ms ease-in-out;
 }
-.cloud{
+#cloud{
     width: 500px;
     position: absolute;
     transform: rotateY(180deg);
     animation: trunk-animation 10s infinite linear;
 }
-.cloud2{
+#cloud2{
     position: absolute;
     width: 300px;
     top: -30px;
     animation: cloud-animation 9s infinite linear;
 }
-.cloud3{
+#cloud3{
     position: absolute;
     width: 400px;
     bottom: 50%;
@@ -63,7 +62,25 @@
     position: absolute;
     left: 10px;
 }
-
+.end-point{
+    background-color: gray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    padding: 10px;
+}
+.restart{
+    background-color: green;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 100px;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+}
 
 @keyframes trunk-animation {
     from {
