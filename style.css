@@ -18,6 +18,11 @@
     bottom: 0;
     
 }
+.kakashi-jump{
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    left: -25px;}
 .jump{
     animation: jump 500ms ease-in-out;
 }
@@ -53,6 +58,10 @@
     bottom: 0;
     height: 15px;
     
+}
+.points{
+    position: absolute;
+    left: 10px;
 }
 
 
