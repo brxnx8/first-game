@@ -10,23 +10,26 @@ let point = 0;
 
 const jump = () =>
 {
-    document.querySelector(".div-init").style.display = 'none';
+    const kakashibot= +window.getComputedStyle(kakashi).bottom.replace('px', '');
+    if(kakashibot == 0){
+        document.querySelector(".div-init").style.display = 'none';
 
-    trunk.classList.add('trunk-animation');
-    
-    var trunkl = trunk.offsetLeft;
-    kakashi.src = 'assets/jump.png';
-    kakashi.classList.add('jump');
-    setTimeout(() => {
-        kakashi.src = 'assets/kakashi.gif';
-        kakashi.classList.remove('jump');
-    }, "500");
-    if(trunkl > -89 && trunkl < 230)
-    {
-        point++;
+        trunk.classList.add('trunk-animation');
         
+        var trunkl = trunk.offsetLeft;
+        kakashi.src = 'assets/jump.png';
+        kakashi.classList.add('jump');
+        setTimeout(() => {
+            kakashi.src = 'assets/kakashi.gif';
+            kakashi.classList.remove('jump');
+        }, "500");
+        if(trunkl > -89 && trunkl < 230)
+        {
+            point++;
+            
+        }
+        points.textContent = `Score = ${point}`;
     }
-    points.textContent = `Score = ${point}`;
 }
 
 
